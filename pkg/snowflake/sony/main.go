@@ -19,7 +19,7 @@ func getMachineID() (uint16, error) { //返回全局定义的机器ID
 func Init(machineId uint16) (err error) {
 	sonyMachineID = machineId
 	t, _ := time.Parse("2006-01-02", "2020-01-01") //初始化一个开始的时间
-	settings := sonyflake.Settings{ //生成全局配置
+	settings := sonyflake.Settings{                //生成全局配置
 		StartTime: t,
 		MachineID: getMachineID, //指定机器ID
 	}

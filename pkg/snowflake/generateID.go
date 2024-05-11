@@ -66,8 +66,8 @@ func NewSnowflakeSeqGenerator(dataCenterId, workId int64) (r *SnowflakeSeqGenera
 	}, nil
 }
 
-// GenerateId timestamp + dataCenterId + workId + sequence
-func (S *SnowflakeSeqGenerator) GenerateId(entity string, ruleName string) string {
+// GenerateId1 timestamp + dataCenterId + workId + sequence
+func (S *SnowflakeSeqGenerator) GenerateId1(entity string, ruleName string) string {
 	S.mu.Lock()
 	defer S.mu.Unlock()
 

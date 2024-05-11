@@ -5,8 +5,15 @@ import (
 	"SnailForum/config"
 	"SnailForum/dto"
 	"SnailForum/model"
+	"SnailForum/pkg/jwt"
+	"SnailForum/pkg/passwd"
+	"SnailForum/pkg/snowflake"
+	"SnailForum/vo"
+	"context"
 	"errors"
 	"github.com/gin-gonic/gin"
+	"strconv"
+	"time"
 )
 
 func Register(user dto.RegisterDTO) {
