@@ -13,5 +13,5 @@ type Post struct {
 	Category   Category `gorm:"foreignKey:ID;references:CategoryID;" json:"category"`
 	Up         int      `json:"up"`
 	Down       int      `json:"down"`
-	gorm.Model
+	BaseModel  gorm.Model
 }
