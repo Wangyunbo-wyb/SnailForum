@@ -34,6 +34,8 @@ func InitRouter() *gin.Engine {
 		GetUserRoutes(v1)      //用户相关路由
 		GetCommunityRoutes(v1) // 社区相关路由
 		GetPostRoutes(v1)      // 帖子相关路由
+		GetCommentRoutes(v1)   //评论相关路由
+		GetGithubRoutes(v1)    //github
 	}
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 

@@ -110,19 +110,19 @@ func CreatePost(userId int64, dto dto.PostDTO) {
 	db.Create(&post)
 	// redis记录帖子发布时间
 	pipeline.ZAdd(ctx, common.KeyPostTimeZSet, &redis.Z{
-		Score:  float64(post.Model.CreatedAt.Unix()),
+		Score:  float64(post.CreatedAt.Unix()),
 		Member: post.ID,
 	})
 	// 设置帖子初始分值为帖子发布时间
 	pipeline.ZAdd(ctx, common.KeyPostScoreZSet, &redis.Z{
-		Score:  float64(post.Model.CreatedAt.Unix()),
+		Score:  float64(post.CreatedAt.Unix()),
 		Member: post.ID,
 	})
 	if cmds, err := pipeline.Exec(ctx); err != nil {
 		zap.L().Error("CreatePost redis操作异常 "+err.Error(), zap.Any("cmds", cmds))
 		return
 	}
-	zap.L().Info("redis记录发帖时间 " + fmt.Sprintf("%d", post.Model.CreatedAt.Unix()))
+	zap.L().Info("redis记录发帖时间 " + fmt.Sprintf("%d", post.CreatedAt.Unix()))
 }
 
 const (

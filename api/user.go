@@ -2,6 +2,9 @@ package api
 
 import (
 	"SnailForum/common"
+	"SnailForum/config"
+	"SnailForum/dto"
+	"SnailForum/logic"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"

@@ -10,7 +10,7 @@ import (
 
 func main() {
 	var configPath string
-	flag.StringVar(&configPath, "f", "./config/config-dev.yaml", "配置文件路径")
+	flag.StringVar(&configPath, "f", "./config/config.yaml", "配置文件路径")
 	flag.Parse()
 
 	// 初始化配置

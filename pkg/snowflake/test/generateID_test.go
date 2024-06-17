@@ -1,6 +1,8 @@
-package snowflake
+package test
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSnowflakeSeqGenerator_GenerateId1(t *testing.T) {
 	var dataCenterId, workId int64 = 1, 1

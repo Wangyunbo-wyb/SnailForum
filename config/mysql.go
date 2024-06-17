@@ -82,20 +82,21 @@ func InitDB(conf *MySQLConfig) *gorm.DB {
 	//数据库迁移
 	db.AutoMigrate(&model.User{})
 	db.AutoMigrate(&model.Category{})
-	db.Create(&model.User{BaseModel: gorm.Model{ID: 1},
+	db.Create(&model.User{
 		UserID:   snowflake.GenerateID(),
-		Username: "admin", Password: "admin",
-		Gender: "male",
-		Age:    11})
-	db.Create(&model.User{BaseModel: gorm.Model{ID: 2},
+		Username: "admin",
+		Password: "admin",
+		Gender:   "male",
+		Age:      11})
+	db.Create(&model.User{
 		UserID:   snowflake.GenerateID(),
 		Username: "novo", Password: "novo",
 		Gender: "male",
 		Age:    11})
-	db.Create(&model.Category{BaseModel: gorm.Model{ID: 1}, Name: "Go", Description: "Go社区"})
-	db.Create(&model.Category{BaseModel: gorm.Model{ID: 2}, Name: "Java", Description: "Java社区"})
-	db.Create(&model.Category{BaseModel: gorm.Model{ID: 3}, Name: "LeetCode", Description: "算法社区"})
-	db.Create(&model.Category{BaseModel: gorm.Model{ID: 4}, Name: "Acwing", Description: "算法社区"})
+	db.Create(&model.Category{Name: "Go", Description: "Go社区"})
+	db.Create(&model.Category{Name: "Java", Description: "Java社区"})
+	db.Create(&model.Category{Name: "LeetCode", Description: "算法社区"})
+	db.Create(&model.Category{Name: "Acwing", Description: "算法社区"})
 
 	db.AutoMigrate(&model.Post{})
 	//db.AutoMigrate(&model.Resource{})

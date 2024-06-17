@@ -40,7 +40,7 @@ func Register(user dto.RegisterDTO) {
 
 func Login(user dto.LoginDTO, ctx *gin.Context) vo.Tokens {
 	dbUser := FindUserByUsername(user.Username)
-	if dbUser.ID == 0 {
+	if dbUser.UserID == 0 {
 		panic(common.NewCustomError(common.CodeInvalidPassword))
 	}
 
