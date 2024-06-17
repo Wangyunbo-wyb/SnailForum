@@ -1,0 +1,35 @@
+2024-06-17 14:20:25.870	INFO	config/logger.go:34	logger init success
+2024-06-17 14:20:25.885	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:20:25.967	ERROR	config/mysql.go:70	failed to connect database ,err:Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-06-17 14:21:59.753	INFO	config/logger.go:34	logger init success
+2024-06-17 14:21:59.769	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:21:59.796	INFO	config/mysql.go:111	database init success
+2024-06-17 14:27:26.553	INFO	config/logger.go:34	logger init success
+2024-06-17 14:27:26.565	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:27:26.687	INFO	config/mysql.go:112	database init success
+2024-06-17 14:30:38.329	INFO	config/logger.go:34	logger init success
+2024-06-17 14:30:38.342	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:30:38.401	INFO	config/mysql.go:112	database init success
+2024-06-17 14:33:44.817	INFO	config/logger.go:34	logger init success
+2024-06-17 14:33:44.833	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:33:44.901	INFO	config/mysql.go:112	database init success
+2024-06-17 14:34:43.310	INFO	config/logger.go:34	logger init success
+2024-06-17 14:34:43.328	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:34:43.405	INFO	config/mysql.go:112	database init success
+2024-06-17 14:35:29.103	INFO	config/logger.go:34	logger init success
+2024-06-17 14:35:29.116	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:35:29.194	INFO	config/mysql.go:112	database init success
+2024-06-17 14:35:29.194	INFO	config/redis.go:29	redis init success
+2024-06-17 14:35:29.195	INFO	router/routers.go:41	init router success
+2024-06-17 14:37:03.684	INFO	config/logger.go:34	logger init success
+2024-06-17 14:37:03.698	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:37:03.765	INFO	config/mysql.go:112	database init success
+2024-06-17 14:37:03.766	INFO	config/redis.go:29	redis init success
+2024-06-17 14:37:03.766	INFO	router/routers.go:42	init router success
+2024-06-17 14:37:23.211	INFO	config/zap.go:83	/api/github/trending	{"status": 200, "method": "GET", "query": "", "ip": "127.0.0.1", "latency": 0.7135059}
+2024-06-17 14:41:44.597	INFO	config/logger.go:34	logger init success
+2024-06-17 14:41:44.611	INFO	snowflake/snowflake.go:25	snowflake node init success
+2024-06-17 14:41:44.672	INFO	config/mysql.go:112	database init success
+2024-06-17 14:41:44.673	INFO	config/redis.go:29	redis init success
+2024-06-17 14:41:44.673	INFO	router/routers.go:42	init router success
+2024-06-17 14:41:49.610	INFO	config/zap.go:83	/api/github/trending	{"status": 200, "method": "GET", "query": "", "ip": "127.0.0.1", "latency": 1.6283054}
